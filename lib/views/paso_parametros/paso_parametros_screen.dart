@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:parqueadero_2025_g2/widgets/custom_drawer.dart';
 
 /// !PasoParametrosScreen - Pantalla de Paso de Parámetros
 /// es una vista/screen que permite ingresar un valor
@@ -54,6 +55,7 @@ class PasoParametrosScreenState extends State<PasoParametrosScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text('Paso de Parámetros')),
+      drawer: const CustomDrawer(),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(

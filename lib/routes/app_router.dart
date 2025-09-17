@@ -14,6 +14,7 @@ final GoRouter appRouter = GoRouter(
     // Rutas para el paso de parámetros
     GoRoute(
       path: '/paso_parametros',
+      name: 'paso_parametros',
       builder: (context, state) => const PasoParametrosScreen(),
     ),
 

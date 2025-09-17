@@ -45,7 +45,7 @@ class CicloVidaScreenState extends State<CicloVidaScreen> {
     }
 
     return BaseView(
-      title: "Ciclo de Vida de en flutter",
+      title: "Ciclo de Vida de en flutter uceva",
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
