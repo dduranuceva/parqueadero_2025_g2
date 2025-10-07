@@ -6,6 +6,8 @@ import 'package:parqueadero_2025_g2/views/paso_parametros/paso_parametros_screen
 import '../views/future/future_view.dart';
 import '../views/home/home_screen.dart';
 import '../views/isolate/isolate_view.dart';
+import '../views/pokemons/pokemon_detail_view.dart';
+import '../views/pokemons/pokemon_list_view.dart';
 
 final GoRouter appRouter = GoRouter(
   routes: [
@@ -49,6 +51,22 @@ final GoRouter appRouter = GoRouter(
       path: '/isolate',
       name: 'isolate',
       builder: (context, state) => const IsolateView(),
+    ),
+    //!Ruta para POKEMON
+    GoRoute(
+      path: '/pokemon',
+      name: 'pokemon',
+      builder: (context, state) => const PokemonListView(),
+    ),
+    //!Ruta para detalle de pokemones
+    GoRoute(
+      path: '/pokemon/:name', // se recibe el nombre del pokemon como parametro
+      name: 'pokemon_detail',
+      builder: (context, state) {
+        final name =
+            state.pathParameters['name']!; // se captura el nombre del pokemon.
+        return PokemonDetailView(name: name);
+      },
     ),
   ],
 );
