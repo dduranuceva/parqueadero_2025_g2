@@ -1,4 +1,5 @@
 import 'package:go_router/go_router.dart';
+import 'package:parqueadero_2025_g2/views/cdt/cdt_list_view.dart';
 import 'package:parqueadero_2025_g2/views/ciclo_vida/ciclo_vida_screen.dart';
 import 'package:parqueadero_2025_g2/views/paso_parametros/detalle_screen.dart';
 import 'package:parqueadero_2025_g2/views/paso_parametros/paso_parametros_screen.dart';
@@ -58,6 +59,7 @@ final GoRouter appRouter = GoRouter(
       name: 'pokemon',
       builder: (context, state) => const PokemonListView(),
     ),
+
     //!Ruta para detalle de pokemones
     GoRoute(
       path: '/pokemon/:name', // se recibe el nombre del pokemon como parametro
@@ -67,6 +69,12 @@ final GoRouter appRouter = GoRouter(
             state.pathParameters['name']!; // se captura el nombre del pokemon.
         return PokemonDetailView(name: name);
       },
+    ),
+    //!Ruta para CDTs
+    GoRoute(
+      path: '/cdts',
+      name: 'cdts',
+      builder: (context, state) => const CDTListView(),
     ),
   ],
 );
