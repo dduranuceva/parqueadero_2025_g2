@@ -1,7 +1,11 @@
 import 'package:go_router/go_router.dart';
+import 'package:parqueadero_2025_g2/views/cdt/cdt_list_view.dart';
 import 'package:parqueadero_2025_g2/views/ciclo_vida/ciclo_vida_screen.dart';
 import 'package:parqueadero_2025_g2/views/paso_parametros/detalle_screen.dart';
 import 'package:parqueadero_2025_g2/views/paso_parametros/paso_parametros_screen.dart';
+import 'package:parqueadero_2025_g2/views/establecimientos/establecimiento_create_view.dart';
+import 'package:parqueadero_2025_g2/views/establecimientos/establecimiento_edit_view.dart';
+import 'package:parqueadero_2025_g2/views/establecimientos/establecimientos_list_view.dart';
 
 import '../views/future/future_view.dart';
 import '../views/home/home_screen.dart';
@@ -58,6 +62,7 @@ final GoRouter appRouter = GoRouter(
       name: 'pokemon',
       builder: (context, state) => const PokemonListView(),
     ),
+
     //!Ruta para detalle de pokemones
     GoRoute(
       path: '/pokemon/:name', // se recibe el nombre del pokemon como parametro
@@ -67,6 +72,33 @@ final GoRouter appRouter = GoRouter(
             state.pathParameters['name']!; // se captura el nombre del pokemon.
         return PokemonDetailView(name: name);
       },
+    ),
+    //!Ruta para CDTs
+    GoRoute(
+      path: '/cdts',
+      name: 'cdts',
+      builder: (context, state) => const CDTListView(),
+    ),
+    //!Ruta para la lista de establecimientos
+    //!Rutas para el manejo de Establecimientos
+    GoRoute(
+      path: '/establecimientos',
+      name: 'establecimientos',
+      builder: (context, state) => const EstablecimientosListView(),
+    ),
+    //!Ruta para editar de un establecimiento
+    GoRoute(
+      path: '/establecimientos/edit/:id',
+      builder: (context, state) {
+        //*se captura el id del establecimiento
+        final id = int.parse(state.pathParameters['id']!);
+        return EstablecimientoEditView(id: id);
+      },
+    ),
+    //!Ruta para crear un nuevo establecimiento
+    GoRoute(
+      path: '/establecimientos/create',
+      builder: (context, state) => const EstablecimientoCreateView(),
     ),
   ],
 );
