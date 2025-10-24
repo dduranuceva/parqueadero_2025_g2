@@ -1,7 +1,7 @@
 /// Modelo para representar un Pokemon con su nombre, imagen y tipos
 class Pokemon {
   int id;
-  String name;
+  String name; // nombre del pokemon
   String image;
   List<String> types;
 
