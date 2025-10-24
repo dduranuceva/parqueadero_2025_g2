@@ -7,6 +7,7 @@ import 'package:parqueadero_2025_g2/views/establecimientos/establecimiento_creat
 import 'package:parqueadero_2025_g2/views/establecimientos/establecimiento_edit_view.dart';
 import 'package:parqueadero_2025_g2/views/establecimientos/establecimientos_list_view.dart';
 
+import '../views/auth/login_page.dart';
 import '../views/future/future_view.dart';
 import '../views/home/home_screen.dart';
 import '../views/isolate/isolate_view.dart';
@@ -100,5 +101,7 @@ final GoRouter appRouter = GoRouter(
       path: '/establecimientos/create',
       builder: (context, state) => const EstablecimientoCreateView(),
     ),
+    //!Ruta para login
+    GoRoute(path: '/login', builder: (context, state) => const LoginPage()),
   ],
 );
