@@ -122,6 +122,11 @@ class CustomDrawer extends StatelessWidget {
               context.go('/login');
             },
           ),
+          ListTile(
+            leading: const Icon(Icons.cloud),
+            title: const Text('Categorías Firebase'),
+            onTap: () => context.pushNamed('categoriasFirebase'),
+          ),
         ],
       ),
     );

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "425885043162",
+    "project_id": "electivagrupo2-58545",
+    "storage_bucket": "electivagrupo2-58545.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:425885043162:android:327320ec20d153618798e3",
+        "android_client_info": {
+          "package_name": "com.example.parqueadero_2025_g2"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAmg00ise3KlG3j4B93nVe2_8vXHu8uIFA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
