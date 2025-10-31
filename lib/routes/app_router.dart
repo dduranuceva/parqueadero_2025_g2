@@ -1,4 +1,6 @@
 import 'package:go_router/go_router.dart';
+import 'package:parqueadero_2025_g2/views/categoria_fb/categoria_fb_form_view.dart';
+import 'package:parqueadero_2025_g2/views/categoria_fb/categoria_fb_list_view.dart';
 import 'package:parqueadero_2025_g2/views/cdt/cdt_list_view.dart';
 import 'package:parqueadero_2025_g2/views/ciclo_vida/ciclo_vida_screen.dart';
 import 'package:parqueadero_2025_g2/views/paso_parametros/detalle_screen.dart';
@@ -103,5 +105,23 @@ final GoRouter appRouter = GoRouter(
     ),
     //!Ruta para login
     GoRoute(path: '/login', builder: (context, state) => const LoginPage()),
+    GoRoute(
+      path: '/categoriasFirebase',
+      name: 'categoriasFirebase',
+      builder: (_, __) => const CategoriaFbListView(),
+    ),
+    GoRoute(
+      path: '/categoriasfb/create',
+      name: 'categoriasfb.create',
+      builder: (context, state) => const CategoriaFbFormView(),
+    ),
+    GoRoute(
+      path: '/categoriasfb/edit/:id',
+      name: 'categorias.edit',
+      builder: (context, state) {
+        final id = state.pathParameters['id']!;
+        return CategoriaFbFormView(id: id);
+      },
+    ),
   ],
 );
